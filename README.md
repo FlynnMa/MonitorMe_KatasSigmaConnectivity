@@ -12,7 +12,7 @@ StayHealthy, Inc. is a large and highly successful medical software company loca
 MonitorThem a data analytics platform that is used for hospital trend and performance
 analytics—alert response times, patient health problem analytics, patient recovery analysis, and so on.
 
-MyMedicalData is a cloud-based patient medical records system used by doctors, nurses, and other heath professionals to record and track a patients heath records with guaranteed partitioning between patient records.
+MyMedicalData is a cloud-based patient medical records system used by doctors, nurses, and other health professionals to record and track a patients health records with guaranteed partitioning between patient records.
 
 ## overview
 ![system overview](./img/overview.png)
@@ -24,7 +24,7 @@ Also, after 2 sessions brainstorming, we believe in security and performance is 
 
 ## Functional requirements
 1. Data collection from sensor devices
-   MonitorMe should read data from eight different patient-monitoring equipment vital sign input sources: heart rate, oxygen level blood sugar, respiration rate, electrocardiogram (ECG), body temperature, and sleep status (sleep or awake).
+  MonitorMe should read data from eight different patient-monitoring equipment vital sign input sources: heart rate, oxygen level blood sugar, respiration rate, electrocardiogram (ECG), body temperature, and sleep status (sleep or awake).
 2. Data transmition
   All patient sensoring devices communicates within the system regarding vital sign readings at different rates. The system must be able to support the varying data transmission rate in an effective way.
   As data sampling is streaming constantly from many sensor devices, meanwhile, there could be commands interactions to devices for configrations or change settings, the data needs to be queued to keep traffic smooth.
@@ -42,7 +42,10 @@ Also, after 2 sessions brainstorming, we believe in security and performance is 
   The system should have admin functions for managing roles of patients and healthcare professionals, and for setting data access policies for security profiles.
   For example, when a new patient come to the nurse station, the admin shall be able to enroll the person with devices, healthcare professionals to the system.
 6. Micro service platform and services
-  Various microservices could be applicable in the MonitorMe system, such as Data ingestion service, data storage service, data analysis service, user management service, nurse station service, alert notification service, patient report service, api gateway service, security service, and etc.
+  Various microservices could be applicable in the MonitorMe system, such as Data collection service, data storage service, data analysis service, user management service, nurse station service, alert notification service, patient report service, api gateway service, security service, and etc.
+7. UI/UX
+  The UI/UX module of the medical monitoring system should be designed to provide an intuitive and user-friendly interface for healthcare professionals. It should include responsive design, accessibility features, user authentication and authorization, customizable alert settings, effective data visualization tools, optimized performance,  strong security and privacy measures. These technical requirements will ensure that healthcare professionals can effectively monitor patient vital signs and respond quickly to critical situations.
+
 
 ## Non-functional requirements
 1. Availability
