@@ -1,4 +1,4 @@
-# MonitorMe
+# Vision
 
 MonitorMe is a patient monitoring system designed to streamline the process of tracking and analyzing vital signs.
 
@@ -41,15 +41,17 @@ Also, after 2 sessions brainstorming, we believe in security and performance is 
 5. Role and Security Management
   The system should have admin functions for managing roles of patients and healthcare professionals, and for setting data access policies for security profiles.
   For example, when a new patient come to the nurse station, the admin shall be able to enroll the person with devices, healthcare professionals to the system.
+6. Micro service platform and services
+  Various microservices could be applicable in the MonitorMe system, such as Data ingestion service, data storage service, data analysis service, user management service, nurse station service, alert notification service, patient report service, api gateway service, security service, and etc.
 
 ## Non-functional requirements
 1. Availability
   The system should be designed to ensure high availability, meaning it should be accessible and usable by medical professionals at all times. This can be achieved through redundant systems, failover mechanisms, and regular maintenance and monitoring.
 2. Reliability
- The system must be highly reliable, with minimal downtime or errors. This can be achieved through rigorous testing, quality assurance processes, and regular updates and maintenance.
- For example,
- while one sensor stops working, it should not impact other data collection.
- We should do multi samples for single report, so to make sure each individual measure error does not impact the accuracy, e.g. the Oxygen level is required to report every 5 seconds, but inside of each sensor device, we will implement the measurement of >10 times per seconds, this could even to be configurable by the healthcare professionals.
+  The system must be highly reliable, with minimal downtime or errors. This can be achieved through rigorous testing, quality assurance processes, and regular updates and maintenance.
+  For example,
+  while one sensor stops working, it should not impact other data collection.
+  We should do multi samples for single report, so to make sure each individual measure error does not impact the accuracy, e.g. the Oxygen level is required to report every 5 seconds, but inside of each sensor device, we will implement the measurement of >10 times per seconds, this could even to be configurable by the healthcare professionals.
 3. Performance and elasticity
   The system should be designed to handle a large volume of data traffic from users while maintaining fast response times and low latency. This can be achieved through:
    efficient message/data queue,
@@ -73,6 +75,20 @@ ECG: every second
 Body temperature: every 5 minutes Sleep status: every 2 minutes
 Maximum number of patients per physical MonitorMe instance: 500
 MonitorMe reads data from eight different patient-monitoring equipment vital sign input sources: heart rate, blood pressure, oxygen level, blood sugar, respiration rate, electrocardiogram (ECG), body temperature, and sleep status (sleep or awake). It then sends the data to a consolidated monitoring screen (per nurses station) with an average response time of 1 second or less. The consolidated monitoring screen displays each patients vital signs, rotating between patients every 5 seconds. There is a maximum of 20 patients per nurses station.
+
+# Business constrains
+1. Security and privacy, prioritize data privacy including regulatory compliance, the system must comply with relevant healthcare regulations and standards, such as HIPAA or GDPR, to ensure the privacy and security of patient data.
+2. Budget constraints
+3. Time to market
+4. Maintenance and support, the system must be easy to maintain by both StayHealthy and clients
+
+
+# Techinical constrains
+Some technical constrains could be applicable in the MonitorMe system:
+1. Maxium patients per nurse station
+2. Maximum patients per MonitorMe instance
+3. Data Storage Capacity, for each patients vital sign, Monitor Me must record and store the past 24 hours of all vital sign readings.
+4. Security Protocols
 
 # Customer Maintenance, workflows todo
 Add/Remove device
