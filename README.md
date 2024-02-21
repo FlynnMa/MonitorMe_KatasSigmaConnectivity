@@ -93,8 +93,31 @@ Some technical constrains could be applicable in the MonitorMe system:
 3. Data Storage Capacity, for each patients vital sign, Monitor Me must record and store the past 24 hours of all vital sign readings.
 4. Security Protocols
 
-# Component Identifications
+# High level user journeys
 
+### The system administrator says:
+"I want to be able to enroll new patients into the system, meanwhile.
+ I want to be able to allocate/free the system resources, such as bed, sensors.
+ I want to be able to assign some healthcare professionals,
+ I want to create an instance to pack all things above."
+![System admin works](./img/HighlevelUseCaseAdmin.png)
+
+### The healthcare professional says:
+"I want to be able to config threshold for vital sign data, to make the system run data collection service and generate realtime events which are process to generate alter notification to my mobile phone
+ I want to be able to quickly identify an abnormal, so I should view real-time vital sign data for the specific patient
+ I want create snapshot for the vital data, together write down my notes and upload to MyMedicalData cloud,
+ I want to be able to access the patient history stored on the MyMedicalData cloud"
+![Healthcare professional works](./img/HighlevelUsecaseHealthcareProfessionals.png)
+
+### The patient says:
+"I want to be able to register on the system so that my mobile phone is able to access all information,
+ I want to be able to view my personal helth history so that I can stay informed about my status, also I might go to other hospitals, then my history can be shared with other professionals
+ I want to provide my consent for security protocols, especially for my personal data collection and sharing
+ I want to be able to request support from healthcare professionals through the system"
+![Patient is treated well](./img/HighlevelUsecasePatient.png)
+
+# Component Identification
+![component identification](./img/components%20identification.png)
 
 # Customer Maintenance, workflows todo
 Add/Remove device
