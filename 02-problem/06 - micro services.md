@@ -1,12 +1,19 @@
+# Micro Services Problems
 
-# Requirements
-The system should be able to adjust its alerts based on the patient's sleep status.
-The system should be able to upload patient snapshots to MyMedicalData through a secure HTTP API call.
+## Infrastructure Problem
 
-The system is able to run multiple micro serivce programs,
-Here we implement 2 types of microservices:
-1. runs on MonitorMe, the system pull micro service program from cloud, install locally, this allows to use internal data without sharing privacy
-2. runs on MyMedicalData the cloud, the system push snapshot of patient data to the
+- The system is able to run multiple micro services in the on-premises servers where `MonitorMe` runs and in the cloud system where `MyMedicalData` runs.
 
-# Privacy policy profiles
-different kind of profiles are made for choise according with different types of microservices, so we offer various options to patients.
+## MonitorMe Problems
+
+- It must permit manage the access control to the data based in the roles of the medical staff.
+
+- It must receive and the store the patient vital signals data from the last 24 hours.
+
+- It will permits retrieve all the patient history by a time range.
+
+- It must permit create alerts to the medical staff based in issues detected over the patient data.
+
+## MyMedicalData Problems
+
+- It must provides an API to permit upload snapshots of the patient data to permit store them on `MyMedicalData`.
