@@ -17,10 +17,10 @@ The system should be able to function even if one of the vital sign devices fail
 Centralized data synchronization system where data from all sensors are timestamped upon reception and stored in a queue. A dedicated thread continuously processes the queue, ensuring that data is processed in the order it was received.
 
 ###  1.2 Use Case:
-    ![sensorDataSync](./img/sensorDataSync.png)
+![sensorDataSync](./../img/sensorDataSync.png)
 
 ### 1.3 Work-flow Diagram    
-    ![sensorDataSyncWF](./img/sensorDataSyncWF.png)
+![sensorDataSyncWF](./../img/sensorDataSyncWF.png)
 
 ## 2. Scalability
 
@@ -28,10 +28,10 @@ Centralized data synchronization system where data from all sensors are timestam
 Distributed architecture where multiple instances of MonitorMe can be deployed across different servers. Implement load balancing and partitioning strategies to evenly distribute the workload and handle the maximum number of patients per physical instance.
 
 ### 2.2 Use Case:
-    ![MMInstance1](./img/MMInstance1.png)
+![MMInstance1](./../img/MMInstance1.png)
 
 ### 2.3 Work-flow Diagram    
-    ![MMInstance1WF](./img/MMInstance1WF.png)
+![MMInstance1WF](./../img/MMInstance1WF.png)
 
 
 ## 3. Fault Tolerance
@@ -40,10 +40,10 @@ Distributed architecture where multiple instances of MonitorMe can be deployed a
 Implement a microservices architecture with redundant components and failover mechanisms. Utilize health checks and circuit breaker patterns to detect and recover from failures automatically.
 
 ### 3.2 Use Case:
-    ![FaultDetector](./img/FaultDetector.png)
+![FaultDetector](./../img/FaultDetector.png)
 
 ### 3.3 Work-flow Diagram    
-    ![FaultDetectorWF](./img/FaultDetectorWF.png)
+![FaultDetectorWF](./../img/FaultDetectorWF.png)
 
 
 ## 4. Security
@@ -52,7 +52,7 @@ Implement a microservices architecture with redundant components and failover me
 Implement end-to-end encryption for data transmission and storage. Use authentication and authorization mechanisms to control access to sensitive patient data. Regularly update security patches and conduct security audits to identify and mitigate potential vulnerabilities.
 
 ### 4.2 Use Case:
-    ![Security](./img/Security.png)
+![Security](./../img/Security.png)
 
 ### 4.3 Work-flow Diagram    
-    ![SecurityWF](./img/SecurityWF.png)
+![SecurityWF](./../img/SecurityWF.png)
