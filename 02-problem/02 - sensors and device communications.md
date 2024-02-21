@@ -14,7 +14,7 @@ The system should be able to function even if one of the vital sign devices fail
 ## 1. Data Synchronization
 
 ###  1.1 Design Solution:
-    Centralized data synchronization system where data from all sensors are timestamped upon reception and stored in a queue. A dedicated thread continuously processes the queue, ensuring that data is processed in the order it was received.
+Centralized data synchronization system where data from all sensors are timestamped upon reception and stored in a queue. A dedicated thread continuously processes the queue, ensuring that data is processed in the order it was received.
 
 ###  1.2 Use Case:
     ![sensorDataSync](./img/sensorDataSync.png)
