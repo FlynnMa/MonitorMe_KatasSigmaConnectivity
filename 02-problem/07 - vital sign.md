@@ -3,6 +3,7 @@
 vital sign input sources will record patient data and send it to the nurse's station at various intervals, where a complete vitals snapshot will be displayed per patient at a rate of 5 seconds in rotation.
 
 If any of the vital input source devices fails, the functional device should still send data
+Medical staff should be able to generate holistic snapshots from a patient's consolidated vital signs at any time.
 
 -Heart rate: every 500ms
 -Blood pressure: every hour
