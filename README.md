@@ -24,26 +24,26 @@ Also, after 2 sessions brainstorming, we believe in security and performance is 
 
 ## Functional requirements
 1. Data collection from sensor devices
-  MonitorMe should read data from eight different patient-monitoring equipment vital sign input sources: heart rate, oxygen level blood sugar, respiration rate, electrocardiogram (ECG), body temperature, and sleep status (sleep or awake).
-2. Data transmition
+  MonitorMe should read data from eight different patient-monitoring sensor devices for vital sign input sources: heart rate, oxygen level blood sugar, respiration rate, electrocardiogram (ECG), body temperature, and sleep status (sleep or awake).
+1. Data transmition
   All patient sensoring devices communicates within the system regarding vital sign readings at different rates. The system must be able to support the varying data transmission rate in an effective way.
   As data sampling is streaming constantly from many sensor devices, meanwhile, there could be commands interactions to devices for configrations or change settings, the data needs to be queued to keep traffic smooth.
-3. Data consolidation
+1. Data consolidation
   Just like we create an order for shopping, an entity of 'order' could include various 'shopping items' which are allocated from different product storage. En patient snapshot should include related information such as:
   patient id and patient information
   sensor id and sensor data in a certain time duration
   healscare professionals
-4. Data storage
+1. Data storage
   For each vital sign, it is required that MornitorMe must record and store the past 24 hours of all vital sign readings. A medical professional can review this history, filtering on time range as well as vital sign.
   We believe security is important here, so we consider to make each patients records could be stored in separate database physically separation of data helps to ensure data records are not mixed up. Also, we want further introduce admin functions for access control, data encryption and audit logs to keep detailed logs of all access and changes to patient records.
   A good idea might be we hold most of the data in local MonitorMe, for most 'micro-services', they should be installed and run at local.
   For analysis or research purposes, create anoymized data sets, so to make sure it can't be linked back to individuals.
-5. Role and Security Management
+1. Role and Security Management
   The system should have admin functions for managing roles of patients and healthcare professionals, and for setting data access policies for security profiles.
   For example, when a new patient come to the nurse station, the admin shall be able to enroll the person with devices, healthcare professionals to the system.
-6. Micro service platform and services
+1. Micro service platform and services
   Various microservices could be applicable in the MonitorMe system, such as Data collection service, data storage service, data analysis service, user management service, nurse station service, alert notification service, patient report service, api gateway service, security service, and etc.
-7. UI/UX
+1. UI/UX
   The UI/UX module of the medical monitoring system should be designed to provide an intuitive and user-friendly interface for healthcare professionals. It should include responsive design, accessibility features, user authentication and authorization, customizable alert settings, effective data visualization tools, optimized performance,  strong security and privacy measures. These technical requirements will ensure that healthcare professionals can effectively monitor patient vital signs and respond quickly to critical situations.
 
 
@@ -92,6 +92,9 @@ Some technical constrains could be applicable in the MonitorMe system:
 2. Maximum patients per MonitorMe instance
 3. Data Storage Capacity, for each patients vital sign, Monitor Me must record and store the past 24 hours of all vital sign readings.
 4. Security Protocols
+
+# Component Identifications
+
 
 # Customer Maintenance, workflows todo
 Add/Remove device
