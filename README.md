@@ -6,7 +6,7 @@ It consolidates data from multiple sources, providing a unified view of a patien
 
 The system also alerts medical professionals of potential issues based on real-time data analysis. This innovative solution aims to enhance patient care and improve the efficiency of healthcare providers.
 
-## background
+## Background
 StayHealthy, Inc. is a large and highly successful medical software company located in San Francisco, California, US. They currently have 2 popular cloud-based SAAS products: MonitorThem and MyMedicalData.
 
 MonitorThem a data analytics platform that is used for hospital trend and performance
@@ -14,13 +14,54 @@ analytics—alert response times, patient health problem analytics, patient reco
 
 MyMedicalData is a cloud-based patient medical records system used by doctors, nurses, and other health professionals to record and track a patients health records with guaranteed partitioning between patient records.
 
-## overview
+## Team
+
+## Overview
 ![system overview](./img/overview.png)
 
 # Reqirements analysis
 The requirements analysis we have done including functional and non-functional requirements.
 Also, after 2 sessions brainstorming, we believe in security and performance is critial to the success.
 ![brain storming](./img/requirements%20analysis%20brainstorming.png)
+
+## Now our story begins
+
+### The system administrator says:
+"I want to be able to enroll new patients into the system, meanwhile.
+ I want to be able to allocate/free the system resources, such as bed, sensors.
+ I want to be able to assign some healthcare professionals,
+ I want to create an instance to pack all things above."
+![System admin works](./img/HighlevelUseCaseAdmin.png)
+
+### The healthcare professional says:
+"I want to be able to config threshold for vital sign data, to make the system run data collection service and generate realtime events which are process to generate alter notification to my mobile phone
+ I want to be able to quickly identify an abnormal, so I should view real-time vital sign data for the specific patient
+ I want create snapshot for the vital data, together write down my notes and upload to MyMedicalData cloud,
+ I want to be able to access the patient history stored on the MyMedicalData cloud"
+![Healthcare professional works](./img/HighlevelUsecaseHealthcareProfessionals.png)
+
+### The patient says:
+"I want to be able to register on the system so that my mobile phone is able to access all information,
+ I want to be able to view my personal helth history so that I can stay informed about my status, also I might go to other hospitals, then my history can be shared with other professionals
+ I want to provide my consent for security protocols, especially for my personal data collection and sharing
+ I want to be able to request support from healthcare professionals through the system"
+![Patient is treated well](./img/HighlevelUsecasePatient.png)
+
+### The customer project manager says:
+"I want the system to have high performance so that it can handle large amounts of data without slowing down or crashing.
+I want the system to be secure so that patient data is protected from unauthorized access.
+I want the system to be auto-scalable so that it can be extended for more capacity on site with easy out-of-box setup
+I want the system to be highly available so that healthcare professionals can monitor patients at all times, even if some of the sensor devices break, there shall be limited impacts to the system
+I want the system is able to automatically scale storage capacity up or down based on the predicted amount of data to be generated
+"
+So yes, let's make a solution for customer project manager. For high performance and scalability consideration, we can implement the MonitorMe system to include 2 parts:
+MonitorMe station - capable to manage 25 nurse stations, it is able to run most micro services, such as admin services, security services, web servies, it keeps all the data
+Nurse Station - capable to manage 20 patients, it focus on basic local services, such as physical sensors data collection services, data transmission services, resource manager, and so on
+For Security, we should have a dedicated security service runs on MonitorMe station
+For Auto-scalability, we can make an nurse station manager service runs on MonitorMe station, this allows the admin of hospital to extend nurse station by themself. We can implement resource manager service runs on nurse station, so this allows the admin of hospital to extend beds by themself.
+For high availability, we can implement redundant components and services such as failover clusters, load balancers, and backup systems. we can also implement monitoring tools to detect and alert on potential device broken, if one sensor is broken, the backup sensor still works.
+![Customer Project Manager](./img/HighLevelUsecaseCustProjectManager.png)
+
 
 ## Functional requirements
 1. Data collection from sensor devices
@@ -93,35 +134,12 @@ Some technical constrains could be applicable in the MonitorMe system:
 3. Data Storage Capacity, for each patients vital sign, Monitor Me must record and store the past 24 hours of all vital sign readings.
 4. Security Protocols
 
-# High level user journeys
-
-### The system administrator says:
-"I want to be able to enroll new patients into the system, meanwhile.
- I want to be able to allocate/free the system resources, such as bed, sensors.
- I want to be able to assign some healthcare professionals,
- I want to create an instance to pack all things above."
-![System admin works](./img/HighlevelUseCaseAdmin.png)
-
-### The healthcare professional says:
-"I want to be able to config threshold for vital sign data, to make the system run data collection service and generate realtime events which are process to generate alter notification to my mobile phone
- I want to be able to quickly identify an abnormal, so I should view real-time vital sign data for the specific patient
- I want create snapshot for the vital data, together write down my notes and upload to MyMedicalData cloud,
- I want to be able to access the patient history stored on the MyMedicalData cloud"
-![Healthcare professional works](./img/HighlevelUsecaseHealthcareProfessionals.png)
-
-### The patient says:
-"I want to be able to register on the system so that my mobile phone is able to access all information,
- I want to be able to view my personal helth history so that I can stay informed about my status, also I might go to other hospitals, then my history can be shared with other professionals
- I want to provide my consent for security protocols, especially for my personal data collection and sharing
- I want to be able to request support from healthcare professionals through the system"
-![Patient is treated well](./img/HighlevelUsecasePatient.png)
-
 # Component Identification
-![component identification](./img/components%20identification.png)
+1000 years later...
+we have been identifying and adjusting components for 10000 times.
+
+Now we get...
+
+![component identification](./img/components%20identification.png›)
 
 # Customer Maintenance, workflows todo
-Add/Remove device
-Sign/Resign nurse, doctors
-Add/Remove local servers for local services
-MonitorMe should be provided with comprehensive hardware and software by StayHealthy. Inc.
-The platform, data stores, databases, and other technical tools and products are unspecified at this time and will be based on your on-prem architectural solution.
