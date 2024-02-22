@@ -65,12 +65,17 @@ I want the system to be auto-scalable so that it can be extended for more capaci
 I want the system to be highly available so that healthcare professionals can monitor patients at all times, even if some of the sensor devices break, there shall be limited impacts to the system
 I want the system is able to automatically scale storage capacity up or down based on the predicted amount of data to be generated
 "
-So yes, let's make a solution for customer project manager. For high performance and scalability consideration, we can implement the MonitorMe system to include 2 parts:
-MonitorMe station - capable to manage 25 nurse stations, it is able to run most micro services, such as admin services, security services, web servies, it keeps all the data
-Nurse Station - capable to manage 20 patients, it focus on basic local services, such as physical sensors data collection services, data transmission services, resource manager, and so on
+
+Yes, and yes,
+let's make a solution for customer project manager. For high performance and scalability consideration, we can implement the MonitorMe system to include 2 parts:
+1. MonitorMe station - capable to manage 25 nurse stations, it is able to run most micro services, such as admin services, security services, web servies, it keeps all the data
+2. Nurse Station - capable to manage 20 patients, it focus on basic local services, such as physical sensors data collection services, data transmission services, resource manager, and so on
+
 For Security, we should have a dedicated security service runs on MonitorMe station
 For Auto-scalability, we can make an nurse station manager service runs on MonitorMe station, this allows the admin of hospital to extend nurse station by themself. We can implement resource manager service runs on nurse station, so this allows the admin of hospital to extend beds by themself.
 For high availability, we can implement redundant components and services such as failover clusters, load balancers, and backup systems. we can also implement monitoring tools to detect and alert on potential device broken, if one sensor is broken, the backup sensor still works.
+
+Here we go!
 ![Customer Project Manager](./img/HighLevelUsecaseCustProjectManager.png)
 
 
