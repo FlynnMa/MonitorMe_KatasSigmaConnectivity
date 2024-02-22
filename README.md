@@ -15,6 +15,17 @@ analytics—alert response times, patient health problem analytics, patient reco
 MyMedicalData is a cloud-based patient medical records system used by doctors, nurses, and other health professionals to record and track a patients health records with guaranteed partitioning between patient records.
 
 ## Team
+We are a team of dedicated architects and specialists, committed to delivering exceptional software and architectural designs. Our collective expertise and passion make us a unique force in the industry.
+[us](./img/us.jpeg)
+
+### Sigma Connectivity - Innovating for a Connected Future
+At Sigma Connectivity, our mission is to drive innovation and create value through connected solutions and devices. We strive to make our partners stand out in the digital landscape.
+
+With one of Europe's most advanced design, test, and verification labs, we cater to the specific needs of our clients. Our goal is to help bring smart, connected products to market, setting new standards in the tech industry.
+
+### Meet us, meet the Sigma Connectivity Team
+We are a group of talented individuals from Sigma Connectivity, specializing in software and architectural design. Our team's strength lies in our ability to innovate and create value through connected solutions and devices.
+
 
 ## Overview
 ![system overview](./img/overview.png)
