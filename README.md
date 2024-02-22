@@ -50,7 +50,7 @@ here we go!
 ![System admin works](./img/HighlevelUseCaseAdmin.png)
 
 ### The healthcare professional says:
-"I want to be able to config threshold for vital sign data, to make the system run data collection service and generate realtime events which are process to generate alter notification to my mobile phone
+"I want to be able to config threshold for vital sign data, to make the system run data collection service and generate realtime events which are process to generate alert notification to my mobile phone
  I want to be able to quickly identify an abnormal, so I should view real-time vital sign data for the specific patient
  I want create snapshot for the vital data, together write down my notes and upload to MyMedicalData cloud,
  I want to be able to access the patient history stored on the MyMedicalData cloud"
