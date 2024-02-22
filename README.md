@@ -24,13 +24,18 @@ The requirements analysis we have done including functional and non-functional r
 Also, after 2 sessions brainstorming, we believe in security and performance is critial to the success.
 ![brain storming](./img/requirements%20analysis%20brainstorming.png)
 
-## Now our story begins
+## Here are our stories
 
 ### The system administrator says:
 "I want to be able to enroll new patients into the system, meanwhile.
  I want to be able to allocate/free the system resources, such as bed, sensors.
  I want to be able to assign some healthcare professionals,
  I want to create an instance to pack all things above."
+
+So yes, let's provide an Admin service in the MonitorMe station that includes RoleManager, permissionManager,
+let's make resource manager to allocate/release bed, sensors
+let's create program to allow the admin to create patient instance so that to register patient, healthcare professionals and resources
+here we go!
 ![System admin works](./img/HighlevelUseCaseAdmin.png)
 
 ### The healthcare professional says:
@@ -38,6 +43,9 @@ Also, after 2 sessions brainstorming, we believe in security and performance is 
  I want to be able to quickly identify an abnormal, so I should view real-time vital sign data for the specific patient
  I want create snapshot for the vital data, together write down my notes and upload to MyMedicalData cloud,
  I want to be able to access the patient history stored on the MyMedicalData cloud"
+
+So, let us provide what our healthcare professional needs, vital sign data viewer, realtime monitor services runs on the stations, snapshot creators for generating reports.
+Yes, to make his life great!
 ![Healthcare professional works](./img/HighlevelUsecaseHealthcareProfessionals.png)
 
 ### The patient says:
@@ -45,6 +53,9 @@ Also, after 2 sessions brainstorming, we believe in security and performance is 
  I want to be able to view my personal helth history so that I can stay informed about my status, also I might go to other hospitals, then my history can be shared with other professionals
  I want to provide my consent for security protocols, especially for my personal data collection and sharing
  I want to be able to request support from healthcare professionals through the system"
+
+ Of course, let's provide a registration service for our patient, and sure we will provide notification services together with it.
+ let's provide security service so to let patient to consent on his privacies, and we also provide health data viewer to him.
 ![Patient is treated well](./img/HighlevelUsecasePatient.png)
 
 ### The customer project manager says:
@@ -140,6 +151,6 @@ we have been identifying and adjusting components for 10000 times.
 
 Now we get...
 
-![component identification](./img/components%20identification.png›)
+![component identification](./img/components%20identification.png)
 
 # Customer Maintenance, workflows todo
