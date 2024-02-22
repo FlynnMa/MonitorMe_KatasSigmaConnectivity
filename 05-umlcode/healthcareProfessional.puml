@@ -1,0 +1,28 @@
+@startuml
+
+actor "Healthcare Professional" as HealthcareProfessional
+
+
+component NurseStation #LightBlue {
+  rectangle "Data Collection Service" as DataCollectionService
+  rectangle "Realtime Data Stream" as RealtimeDataStream
+}
+
+component MonitorMeStation #LightYellow {
+  rectangle "100000 micro services" as ManyManyAlgorithmMicroSerivces
+  rectangle "Alert Notification Service" as AlertNotificationService
+  rectangle "Vital Sign Data Viewer" as VitalSignDataViewer
+  rectangle "Snapshot Creator" as SnapshotCreator
+}
+
+database "MyMedicalData Cloud" as MyMedicalDataCloud
+
+HealthcareProfessional --> DataCollectionService : Configures threshold
+DataCollectionService --> RealtimeDataStream : Generates
+RealtimeDataStream --> ManyManyAlgorithmMicroSerivces : process
+ManyManyAlgorithmMicroSerivces --> AlertNotificationService : Generates
+HealthcareProfessional --> VitalSignDataViewer : Views real-time data
+HealthcareProfessional --> SnapshotCreator : Creates snapshot
+SnapshotCreator --> MyMedicalDataCloud : Uploads snapshot
+
+@enduml
