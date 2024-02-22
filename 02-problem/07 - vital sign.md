@@ -1,16 +1,13 @@
-#Vital signs
+# Vital signs
 
-vital sign input sources will record patient data and send it to the nurse's station at various intervals, where a complete vitals snapshot will be displayed per patient at a rate of 5 seconds in rotation.
 
-If any of the vital input source devices fails, the functional device should still send data
-Medical staff should be able to generate holistic snapshots from a patient's consolidated vital signs at any time.
+## Section Overview
+Vital sign recording and display system in the MonitorMe setup. It outlines the challenges related to recording patient data from various vital sign input sources and ensuring continuous data transmission to the nurse's station. Additionally, it covers the generation of holistic snapshots from a patient's consolidated vital signs.
 
--Heart rate: every 500ms
--Blood pressure: every hour
--Oxygen level: every 5 seconds
--Blood sugar: every 2 minutes
--Respiration: every second
--ECG: every second
--Body temperature: every 5 minutes
--Sleep status: every 2 minutes
+# Problems and Solutions
+## 1. Continuous Data Transmission
+### 1.1 Design Solution:
+Implement a data transmission protocol that ensures continuous data transmission from vital sign input sources to the nurse's station. Develop a fault-tolerant mechanism where even if one vital sign input source device fails, the functional devices continue sending data without interruption.
 
+### 1.2 Work-flow Diagram:
+![vital collection WF](./../img/vitalsigndata.png)
