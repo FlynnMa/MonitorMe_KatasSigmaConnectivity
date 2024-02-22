@@ -1,0 +1,16 @@
+@startuml
+
+actor "Patient" as Patient
+component "Registration Service" as RegistrationService
+component "Health Data Viewer" as HealthDataViewer
+component "Notification Service" as NotificationService
+component "Security Service" as SecurityService
+component "Support Request Service" as SupportRequestService
+
+Patient --> RegistrationService : Registers
+Patient --> HealthDataViewer : Views personal health data
+Patient --> NotificationService : Receives notifications
+Patient --> SecurityService : Provides securityConsent
+Patient --> SupportRequestService : Requests support
+
+@enduml

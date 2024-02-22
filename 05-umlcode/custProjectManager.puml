@@ -1,0 +1,30 @@
+@startuml
+
+component MonitorMeStation {
+  [Admin Services]
+  [Security Services]
+  [Web Services]
+  [Data Storage]
+  [Nurse Station Manager Service]
+}
+
+component NurseStation {
+  [SensorDeviceServices]
+  [ResourceManagerService]
+  [DeviceBrokenMonitor]
+}
+
+MonitorMeStation --> NurseStation : manages
+MonitorMeStation --> RedundantNurseStation : manages
+
+SensorDeviceServices --> PhysicalSensors
+SensorDeviceServices --> RedundantPhysicalSensors
+DeviceBrokenMonitor  --> PhysicalSensors
+DeviceBrokenMonitor  --> RedundantPhysicalSensors
+ResourceManagerService  --> PhysicalSensors
+ResourceManagerService  --> RedundantPhysicalSensors
+
+note left of MonitorMeStation: capable of managing 25 nurse stations
+note bottom of NurseStation: capable of managing 20 patients
+
+@enduml

@@ -1,0 +1,23 @@
+
+
+@startuml
+package "Admin Service" #LightBlue {
+  [RoleManager]
+  [PermissionManager]
+}
+package "Resource Manager" #LightYellow {
+  [Sensor]
+  [Bed]
+}
+actor Administrator
+rectangle Patient
+rectangle HealthcareProfessionals
+component "Patient Service" as patientService
+
+Administrator --> patientService : Creates
+patientService --> Patient : Enrolls
+patientService --> "Resource Manager" : Allocates/Releases
+patientService --> HealthcareProfessionals : Assigns
+
+patientService --> "Admin Service" : Manages Roles/Permissions
+@enduml
