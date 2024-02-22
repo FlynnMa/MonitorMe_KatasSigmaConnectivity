@@ -16,7 +16,7 @@ MyMedicalData is a cloud-based patient medical records system used by doctors, n
 
 ## Team
 We are a team of dedicated architects and specialists, committed to delivering exceptional software and architectural designs. Our collective expertise and passion make us a unique force in the industry.
-[us](./img/us.jpeg)
+![us](./img/us.jpeg)
 
 ### Sigma Connectivity - Innovating for a Connected Future
 At Sigma Connectivity, our mission is to drive innovation and create value through connected solutions and devices. We strive to make our partners stand out in the digital landscape.
